@@ -193,7 +193,12 @@ app.post("/submit", function(req,res){
     
 });
 
-app.get('/favicon.ico', (req, res) => res.status(204));
+
+app.get('/favicon.ico', function(req, res) { 
+    res.status(204);
+    res.end();    
+});
+
 
 app.post("/register", function (req, res) {
     User.register({
