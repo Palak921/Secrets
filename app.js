@@ -76,7 +76,7 @@ passport.deserializeUser(function (id, done) {
 passport.use(new GoogleStrategy({
         clientID: process.env.CLIENT_ID,
         clientSecret: process.env.CLIENT_SECRETS,
-        callbackURL: "https://powerful-earth-57721.herokuapp.com/auth/google/secrets",
+        callbackURL: "http://localhost:3000/auth/google/secrets",
         userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
     },
     function (accessToken, refreshToken, profile, cb) {
@@ -92,7 +92,7 @@ passport.use(new GoogleStrategy({
 passport.use(new FacebookStrategy({
         clientID: process.env.FACEBOOK_CLIENT_ID,
         clientSecret: process.env.FACEBOOK_SECRETS,
-        callbackURL: "https://powerful-earth-57721.herokuapp.com/auth/facebook/secrets"
+        callbackURL: "http://localhost:3000/auth/facebook/secrets"
     },
     function (accessToken, refreshToken, profile, cb) {
         console.log(profile);
